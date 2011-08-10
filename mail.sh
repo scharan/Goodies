@@ -38,9 +38,9 @@ else
 fi
 
 #Set up the various headers for sendmail to use
-TO='scharan20@gmail.com';
+TO='';
 CC='';
-FROM='scharan@saicharan.in';
+FROM='';
 if [ -z "$SUBJECT" ]; then
     SUBJECT='Task complete!';
 fi
