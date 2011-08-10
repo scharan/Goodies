@@ -1,11 +1,19 @@
-#Testing OAuth with GoogleWebServices
-#Author: Sai Charan.
+#!/usr/bin/python
+#
+# Author: Sai Charan (http://saicharan.in/blog)
+# Distributed without warranties or conditions of any kind, either
+# express or implied except those under the CC BY-NC 3.0 license. 
+# You may obtain a copy of the license at:
+#
+# http://creativecommons.org/licenses/by-nc/3.0/
+#
+# Testing OAuth with GoogleWebServices
 
 import httplib, urllib, hashlib, hmac, time, base64, binascii
 from urlparse import parse_qs
 
 method = "POST"
-#http://code.google.com/apis/accounts/docs/OAuth_ref.html#SigningOAuth
+# Refernce: http://code.google.com/apis/accounts/docs/OAuth_ref.html#SigningOAuth
 consumerKey = "anonymous"
 consumerSecret = "anonymous"
 requestTokenUrl = "https://www.google.com/accounts/OAuthGetRequestToken"

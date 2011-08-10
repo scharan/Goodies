@@ -1,6 +1,13 @@
 #!/usr/bin/perl -w
 #
-# Author: Sai Charan K.
+# Author: Sai Charan (http://saicharan.in/blog)
+# Distributed without warranties or conditions of any kind, either
+# express or implied except those under the CC BY-NC 3.0 license. 
+# You may obtain a copy of the license at:
+#
+# http://creativecommons.org/licenses/by-nc/3.0/
+#
+# Author: Sai Charan K (http://saicharan.in/blog)
 # Date: 5th March 2010
 #
 # M3U Playlist generator.
@@ -8,11 +15,14 @@
 # Run this script on any top level directory and you will have a .m3u file for each
 # directory/sub directory that contains one or more mp3 files.
 # You can choose to support multiple audio file formats by modifying the 
+# audioFileExtensions variable.
+#
+# Note(s) to self:
+# - The list of supported files can be moved to a .rc file or passed as args.
 #
 # Version history
 # v0.1: Initial draft, 5th march 2010.
 # v0.2: Completed initial version, 9th march 2010.
-#
 
 use warnings;
 use strict;
