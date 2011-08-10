@@ -29,17 +29,17 @@ scope = "http://www.google.com/calendar/feeds"
 
 #Dictionary of headers
 headers = {"Content-type": "application/x-www-form-urlencoded",
-		   "Accept": "text/plain", 
-		   "Authorization": "OAuth"}
+           "Accept": "text/plain", 
+           "Authorization": "OAuth"}
 
 #Dictionary of request parameters
 requestParams = {"oauth_consumer_key":consumerKey,
-				 "oauth_signature_method":"HMAC-SHA1",
-				 "oauth_timestamp":oauthTimeStamp,
-				 "oauth_nonce":oauth_nonce, 
-				 "oauth_version":"1.0", 
-				 "oauth_callback":"http://saicharan.in/beta",
-				 "scope":scope}
+                 "oauth_signature_method":"HMAC-SHA1",
+                 "oauth_timestamp":oauthTimeStamp,
+                 "oauth_nonce":oauth_nonce, 
+                 "oauth_version":"1.0", 
+                 "oauth_callback":"http://saicharan.in/beta",
+                 "scope":scope}
 
 #Not 100% OAuth compatible, but works for the present example
 requestkeys = requestParams.keys()
@@ -48,7 +48,7 @@ requestkeys.sort()
 toBeNormalizedParamString = ''
 for key in requestkeys:
 	toBeNormalizedParamString += key+"="+str(requestParams[key])+"&"
-
+        
 #remove the trailing '&'
 toBeNormalizedParamString = toBeNormalizedParamString[:-1]
 
@@ -63,8 +63,7 @@ baseString = method+"&"+ urllib.quote(requestTokenUrl, safe="~") + "&" + normali
 
 hmacKey = urllib.quote(consumerSecret, safe="~")
 hmacObject = hmac.new( hmacKey+"&", baseString, hashlib.sha1)
-#remove the trailing newline.
-signature = base64.encodestring( hmacObject.digest() )[:-1]
+signature = base64.encodestring( hmacObject.digest() )[:-1] #remove the trailing newline.
 
 #Print the baseString, copy it to the text box at:
 #http://hueniverse.com/2008/10/beginners-guide-to-oauth-part-iii-security-architecture/
