@@ -11,4 +11,15 @@
 //
 // For comments/queries, leave a comment at: 
 // http://saicharan.in/blog/2011/08/08/readability-for-chrome-save-to-instapaper/
-(function(){var d=document,z=d.createElement('scr'+'ipt'),b=d.body,l=d.location;try{if(!b)throw(0);d.title='(Saving...) '+d.title;z.setAttribute('src',l.protocol+'//www.instapaper.com/j/ms9ZEqYS9JfG?u='+encodeURIComponent(l.href)+'&t='+(new Date().getTime()));b.appendChild(z);}catch(e){alert('Please wait until the page has loaded.');}}());
+(function(){
+    var d=document,z=d.createElement('scr'+'ipt'),b=d.body,l=d.location;
+    try {
+        if(!b)
+            throw(0);
+        d.title='(Saving...) '+d.title;
+        z.setAttribute('src',l.protocol+'//www.instapaper.com/j/ms9ZEqYS9JfG?u='+encodeURIComponent(l.href)+'&t='+(new Date().getTime()));
+        b.appendChild(z);
+    } catch(e){
+        alert('Please wait until the page has loaded.');
+    }
+}());
