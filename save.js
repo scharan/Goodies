@@ -17,7 +17,7 @@
         if(!b)
             throw(0);
         d.title='(Saving...) '+d.title;
-        z.setAttribute('src',l.protocol+'//www.instapaper.com/j/ms9ZEqYS9JfG?u='+encodeURIComponent(l.href)+'&t='+(new Date().getTime()));
+        z.setAttribute('src',l.protocol+'//www.instapaper.com/j/<FROM-BOOKMARKLET>?u='+encodeURIComponent(l.href)+'&t='+(new Date().getTime()));
         b.appendChild(z);
     } catch(e){
         alert('Please wait until the page has loaded.');
