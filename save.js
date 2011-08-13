@@ -6,11 +6,14 @@
 // http://creativecommons.org/licenses/by-nc/3.0/
 //
 // Adapted from Instapaper's 'Read Later' Bookmarklet.
-// On Windows, this file should go into:
-// %USERPROFILE%\AppData\Local\Google\Chrome\User Data\Default\Extensions\oadggleneidfmbhhedlildjnpgcggmch\1.6_0\js
+// - On Windows, this file should go into:
+//   %USERPROFILE%\AppData\Local\Google\Chrome\User Data\Default\Extensions\oadggleneidfmbhhedlildjnpgcggmch\1.6_0\js\
+// - On Ubuntu, the location is:
+//   ~/.config/chromium/Default/Extensions/oadggleneidfmbhhedlildjnpgcggmch/1.6_0/js/
 //
 // For comments/queries, leave a comment at: 
 // http://saicharan.in/blog/2011/08/08/readability-for-chrome-save-to-instapaper/
+
 (function(){
     var d=document,z=d.createElement('scr'+'ipt'),b=d.body,l=d.location;
     try {
