@@ -1,0 +1,25 @@
+# Author: Sai Charan (http://saicharan.in/blog/)
+# Distributed without warranties or conditions of any kind, either
+# express or implied except those under the CC BY-NC 3.0 license. 
+# You may obtain a copy of the license at:
+#
+# http://creativecommons.org/licenses/by-nc/3.0/
+#
+# Script to 'restore' ssh agent across screen/tmux sessions.
+# `ls ...` finds the most recent (current) agent.pid file. But it does not 
+# return the full path of that file. The find part of the command returns the
+# full path of the file that is then exported in the appropriate variable.
+#
+# Inspired from: http://www.tolaris.com/2011/07/12/reconnecting-your-ssh-agent-to-a-detached-gnu-screen-session/
+# Modified to find the 'current' agent.pid file. The above does not always 
+# return the current agent.pid file.
+#
+# To run, you MUST invoke it as:
+# $ . /path/to/this/script OR
+# $ source /path/to/this/script
+#
+# Invoking it as /path/to/this/script will not work since that will be run in a 
+# newly forked shell that dies on script exit and will not export the variable 
+# in the current shell.
+
+export SSH_AUTH_SOCK=$(find /tmp/ssh-* -name `ls -alth /tmp/ssh-* | grep \`whoami\` | grep agent | head -n 1 | awk '{print $8}'`)
