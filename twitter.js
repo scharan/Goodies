@@ -26,5 +26,5 @@
             avatars: false,
             behavior: 'all'
         }
-    }).render().setUser('scharan').start();
+    }).render().setUser('YOUR-TWITTER-ID').start();
 }());
