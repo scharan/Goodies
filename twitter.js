@@ -9,7 +9,7 @@
         theme: {
             shell: {
                 background: '#262626',
-                color: '#d6dbdf'
+                color: '#d6dbdf',
                 border: 2px solid #d6dbdf;
             },
             tweets: {
