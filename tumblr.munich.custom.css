@@ -102,9 +102,24 @@ ul#nav {
 }
 
 #dsq-content #dsq-global-toolbar, #dsq-sort-by select {
- visibility: hidden;
+    visibility: hidden;
 }
 
-#disqus_thread {
- border-top: 1px solid #FFBC00;
+#dsq-reply.dsq-reply {
+    border-top: 1px solid #FFBC00;
+    clear: both;
+}
+
+#disqus_thread h3 {
+    visibility: hidden;
+}
+
+.twtr-widget {
+    width: 250px;
+    height: 300px;
+    border: 2px solid #FFBC00;
+}
+
+#dsq-subscribe {
+    visibility: hidden;
 }
