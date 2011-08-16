@@ -82,20 +82,20 @@ ul#nav {
     margin-top: 10px;
 }
 
-
+#main, #bottom {
+    left: 20%;
+}
 
 #main {
     position: relative;
     top: 0;
-    left: 20%;
     padding-top: 60px;
 }
 
 #bottom {
-    visibility: hidden;
-    position: absolute;
+    //visibility: hidden;
+    position: relative;
     bottom: 0;
-    left: 35%;
-    width: 50%;
     margin-bottom: 0;
+    clear: both;
 }
