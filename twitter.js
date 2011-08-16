@@ -10,6 +10,7 @@
             shell: {
                 background: '#262626',
                 color: '#d6dbdf'
+                border: '2px solid #d6dbdf';
             },
             tweets: {
                 background: '#262626',
