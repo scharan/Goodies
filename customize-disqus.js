@@ -7,7 +7,7 @@
 
 $(document).ready(function() {
     var nodsq = ["ask", "about"];
-    if( $.inArray($(location).attr('href').split('/')[1], nodsq) ) {
+    if( $.inArray($(location).attr('href').split('/').reverse()[0], nodsq) >= 0 ) {
         $("#disqus_thread").hide();
     }
 });
