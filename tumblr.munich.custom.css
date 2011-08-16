@@ -100,3 +100,11 @@ ul#nav {
     clear: both;
     border: 0;
 }
+
+#dsq-content #dsq-global-toolbar, #dsq-sort-by select {
+ visibility: hidden;
+}
+
+#disqus_thread {
+ border-top: 1px solid #FFBC00;
+}
