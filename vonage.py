@@ -44,7 +44,7 @@ today = datetime.datetime.now()
 # Now calculate number of days passed since start of billing cycle.
 elapsed = (today - datetime.datetime.strptime( doc.getElementById(billing_cycle_id).childNodes[0].nodeValue.expandtabs().split(billing_cycle_date_separator)[0].strip(), billing_cycle_date_format) ).days
 print "Your unbilled Vonage usage (%d days so far) is: %d mins; " % (elapsed, mins),
-if mins/month_mins < elapsed:
+if mins/day_mins < elapsed:
     print "you are under the limit."
     exit(0)
 else:
